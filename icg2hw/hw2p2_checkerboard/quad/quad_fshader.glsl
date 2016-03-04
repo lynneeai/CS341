@@ -7,7 +7,14 @@ out vec3 color;
 uniform sampler1D colormap;
 
 void main() {
-    color = vec3(1.0, 0.0, 0.0);
+     float value;
+     int row = int(uv[0] * 10);
+     int col = int(uv[1] * 10);
+     if ((row + col) % 2 == 1)
+         value = 0.0f;
+     else
+         value = 1.0f;
+     color = texture(colormap, value).rgb;
 }
 
 
