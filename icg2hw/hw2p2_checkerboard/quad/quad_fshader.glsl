@@ -17,9 +17,9 @@ void main() {
     float yellowborderdist = 0.058f;
     float redgreenborderdist = 0.035f;
     if ((row + col) % 2 == 1)
-        value = 0.35f + (dist > yellowborderdist ? yellowborderdist - redgreenborderdist: dist - redgreenborderdist) * 0.15f / (yellowborderdist - redgreenborderdist);
+        value = 0.33f + (dist > yellowborderdist ? yellowborderdist - redgreenborderdist: dist - redgreenborderdist) * 0.17f / (yellowborderdist - redgreenborderdist);
     else
-        value = 0.65f - (dist > yellowborderdist ? yellowborderdist - redgreenborderdist: dist - redgreenborderdist) * 0.15f / (yellowborderdist - redgreenborderdist);
+        value = 0.67f - (dist > yellowborderdist ? yellowborderdist - redgreenborderdist: dist - redgreenborderdist) * 0.17f / (yellowborderdist - redgreenborderdist);
 
     int splitRow = int(uv[0] * 300);
     int splitCol = int(uv[1] * 300);
