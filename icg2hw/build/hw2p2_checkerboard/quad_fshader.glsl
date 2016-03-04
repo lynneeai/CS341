@@ -29,6 +29,7 @@ void main() {
 
     color = texture(colormap, value).rgb;
     
+
 }
 
 
