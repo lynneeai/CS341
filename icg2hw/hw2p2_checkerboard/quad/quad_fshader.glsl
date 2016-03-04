@@ -8,23 +8,27 @@ uniform sampler1D colormap;
 
 void main() {
 	
-	float value;
-	int row = int(uv[0] * 10);
-	int col = int(uv[1] * 10);
+    float value;
+    int row = int(uv[0] * 10);
+    int col = int(uv[1] * 10);
     
+    float dist = sqrt((uv[0] - row * 0.1 - 0.05f) * (uv[0] - row * 0.1 - 0.05f) +
+            (uv[1] - col * 0.1 - 0.05f) * (uv[1] - col * 0.1 - 0.05f));
+    float yellowborderdist = 0.058f;
+    float redgreenborderdist = 0.035f;
     if ((row + col) % 2 == 1)
-     	value = 0.0f;
+        value = 0.35f + (dist > yellowborderdist ? yellowborderdist - redgreenborderdist: dist - redgreenborderdist) * 0.15f / (yellowborderdist - redgreenborderdist);
     else
-        value = 1.0f;
+        value = 0.65f - (dist > yellowborderdist ? yellowborderdist - redgreenborderdist: dist - redgreenborderdist) * 0.15f / (yellowborderdist - redgreenborderdist);
 
-    int splitRow = int(uv[0] * 100);
-    int splitCol = int(uv[1] * 100);
+    int splitRow = int(uv[0] * 300);
+    int splitCol = int(uv[1] * 300);
 
-    if ((splitRow % 10 == 0) || (splitCol % 10 == 0))
+    if ((splitRow % 30 == 0) || (splitRow % 30 == 29)|| (splitCol % 30 == 0) || (splitCol % 30 == 29))
     	value = 0.5f;
 
-   	if ((uv[0] > 0.99) || (uv[1] > 0.99))
-   		value = 0.5f; 
+    if ((uv[0] > 0.9967) || (uv[1] > 0.9967))
+                value = 0.5f;
 
 
     color = texture(colormap, value).rgb;
