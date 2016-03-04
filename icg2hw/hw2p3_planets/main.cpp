@@ -7,8 +7,9 @@
 
 #include "quad/quad.h"
 
-// Quad stuff1;
-// ...
+Quad sun;
+Quad moon;
+Quad earth;
 
 void Init() {
     // sets background color
@@ -19,9 +20,55 @@ void Init() {
 void Display() {
     glClear(GL_COLOR_BUFFER_BIT);
     float time_s = glfwGetTime();
+    sun.Init("sun.tga");
+    earth.Init("earth.tga");
+    moon.Init("moon.tga");
 
-    // compute the transformation matrices
-    // {stuff}.Draw({stuff}_modelmatrix);
+    //compute the transformation matrices
+    float sun_scale_factor = 0.2f;
+    float earth_scale_factor = 0.1f;
+    float moon_scale_factor = 0.06f;
+    float time_secs = glfwGetTime();
+    float earth_orbit_radius = 0.6f;
+    float moon_orbit_radius = 0.2f;
+    float earth_rotationspeed_theta_per_second = 0.3f;
+    float moon_rotationspeed_theta_per_second = 0.6f;
+    float sun_rotationspeed_theta_per_second = 0.1f;
+    float earth_revolutionspeed_theta_per_second = 0.2f;
+    float moon_revolutionspeed_theta_per_second = 0.6f;
+
+    float sun_rotation_theta = time_s * sun_rotationspeed_theta_per_second;
+    glm::mat4 sun_T = glm::translate(glm::mat4(1.0f),
+                                 glm::vec3(0.0f, 0.0f ,0.0f));
+    glm::mat4 sun_R = glm::rotate(glm::mat4(1.0f), sun_rotation_theta,
+                              glm::vec3(0.0f, 0.0f, 1.0f));
+    glm::mat4 sun_S = glm::mat4(1.0f);
+    sun_S[0][0] = sun_scale_factor;
+    sun_S[1][1] = sun_scale_factor;
+    sun.Draw(sun_T, sun_R, sun_S);
+
+    float earth_revolution_theta = time_s * earth_revolutionspeed_theta_per_second;
+    float earth_rotation_theta = time_s * earth_rotationspeed_theta_per_second;
+    glm::mat4 earth_T = glm::translate(glm::mat4(1.0f),
+                                 glm::vec3(earth_orbit_radius * cos(earth_revolution_theta) , -earth_orbit_radius * sin(earth_revolution_theta) ,0.0f));
+    glm::mat4 earth_R = glm::rotate(glm::mat4(1.0f), earth_rotation_theta,
+                              glm::vec3(0.0f, 0.0f, 1.0f));
+    glm::mat4 earth_S = glm::mat4(1.0f);
+    earth_S[0][0] = earth_scale_factor;
+    earth_S[1][1] = earth_scale_factor;
+    earth.Draw(earth_S, earth_R, earth_T);
+
+    float moon_revolution_theta = time_s * moon_revolutionspeed_theta_per_second;
+    float moon_rotation_theta = time_s * moon_rotationspeed_theta_per_second;
+    glm::mat4 moon_T = glm::translate(glm::mat4(1.0f),
+                                 glm::vec3(earth_orbit_radius * cos(earth_revolution_theta) + moon_orbit_radius * cos(moon_revolution_theta),
+                                           -earth_orbit_radius * sin(earth_revolution_theta) + moon_orbit_radius * sin(moon_revolution_theta),0.0f));
+    glm::mat4 moon_R = glm::rotate(glm::mat4(1.0f), moon_rotation_theta,
+                              glm::vec3(0.0f, 0.0f, 1.0f));
+    glm::mat4 moon_S = glm::mat4(1.0f);
+    moon_S[0][0] = moon_scale_factor;
+    moon_S[1][1] = moon_scale_factor;
+    moon.Draw(moon_S, moon_R, moon_T);
 }
 
 void ErrorCallback(int error, const char* description) {
