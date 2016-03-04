@@ -1,0 +1,7 @@
+/Users/wangmengjie/Desktop/graphics/icg2hw-build/hw2p3_planets/CMakeFiles/copy_shaders_hw2p3_planets.dir
+/Users/wangmengjie/Desktop/graphics/icg2hw-build/hw2p2_checkerboard/CMakeFiles/copy_shaders_hw2p2_checkerboard.dir
+/Users/wangmengjie/Desktop/graphics/icg2hw-build/hw2p2_checkerboard/CMakeFiles/hw2p2_checkerboard.dir
+/Users/wangmengjie/Desktop/graphics/icg2hw-build/hw2p1_spiral/CMakeFiles/copy_shaders_hw2p1_spiral.dir
+/Users/wangmengjie/Desktop/graphics/icg2hw-build/CMakeFiles/common_headers.dir
+/Users/wangmengjie/Desktop/graphics/icg2hw-build/hw2p3_planets/CMakeFiles/hw2p3_planets.dir
+/Users/wangmengjie/Desktop/graphics/icg2hw-build/hw2p1_spiral/CMakeFiles/hw2p1_spiral.dir
