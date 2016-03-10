@@ -1,0 +1,3 @@
+/Users/wangmengjie/Desktop/graphics/CS341/icg3hw-build/hw3_trackball/CMakeFiles/copy_shaders_hw3_trackball.dir
+/Users/wangmengjie/Desktop/graphics/CS341/icg3hw-build/hw3_trackball/CMakeFiles/hw3_trackball.dir
+/Users/wangmengjie/Desktop/graphics/CS341/icg3hw-build/CMakeFiles/common_headers.dir
