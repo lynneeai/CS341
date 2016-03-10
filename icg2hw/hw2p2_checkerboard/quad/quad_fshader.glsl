@@ -28,7 +28,7 @@ void main() {
     	value = 0.5f;
 
     if ((uv[0] > 0.9967) || (uv[1] > 0.9967))
-                value = 0.5f;
+        value = 0.5f;
 
 
     color = texture(colormap, value).rgb;
