@@ -31,6 +31,7 @@ mat4 cube_scale;
 mat4 quad_model_matrix;
 
 Trackball trackball;
+vec2 anchor_point;
 
 mat4 OrthographicProjection(float left, float right, float bottom,
                             float top, float near, float far) {
@@ -160,6 +161,12 @@ void MouseButton(GLFWwindow* window, int button, int action, int mod) {
         old_trackball_matrix = trackball_matrix;
         // Store the current state of the model matrix.
     }
+
+    if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS){
+        double x_i, y_i;
+        glfwGetCursorPos(window, &x_i, &y_i);
+        anchor_point = TransformScreenCoords(window, x_i, y_i);
+    }
 }
 
 void MousePos(GLFWwindow* window, double x, double y) {
@@ -177,14 +184,10 @@ void MousePos(GLFWwindow* window, double x, double y) {
         // moving the mouse cursor up and down (along the screen's y axis)
         // should zoom out and it. For that you have to update the current
         // 'view_matrix' with a translation along the z axis.
-        double mouseX, mouseY;
-        glfwGetCursorPos(window, &mouseX, &mouseY);
-        vec2 p2 = TransformScreenCoords(window, mouseX, mouseY);
-        cout << mouseX << " " << mouseY << endl;
-
-        mat4 zoomMatrix = translate(mat4(1.0f), vec3(0.0f, 0.0f, (mouseY - central) / 100));
-        central = mouseY;
-        view_matrix = view_matrix * zoomMatrix;
+        vec2 p = TransformScreenCoords(window, x, y);
+        float scale_factor = 2.0f;
+        view_matrix = translate(view_matrix,vec3(0.0f,0.0f,(anchor_point.y - p.y) * scale_factor));
+        anchor_point = p;
     }
 }
 
