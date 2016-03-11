@@ -19,6 +19,8 @@ Grid grid;
 int window_width = 800;
 int window_height = 600;
 
+double central = 300;
+
 using namespace glm;
 
 mat4 projection_matrix;
@@ -175,7 +177,14 @@ void MousePos(GLFWwindow* window, double x, double y) {
         // moving the mouse cursor up and down (along the screen's y axis)
         // should zoom out and it. For that you have to update the current
         // 'view_matrix' with a translation along the z axis.
-        // view_matrix = ...
+        double mouseX, mouseY;
+        glfwGetCursorPos(window, &mouseX, &mouseY);
+        vec2 p2 = TransformScreenCoords(window, mouseX, mouseY);
+        cout << mouseX << " " << mouseY << endl;
+
+        mat4 zoomMatrix = translate(mat4(1.0f), vec3(0.0f, 0.0f, (mouseY - central) / 100));
+        central = mouseY;
+        view_matrix = view_matrix * zoomMatrix;
     }
 }
 

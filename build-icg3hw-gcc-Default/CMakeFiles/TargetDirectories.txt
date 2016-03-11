@@ -1,0 +1,3 @@
+/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg3hw-gcc-Default/hw3_trackball/CMakeFiles/hw3_trackball.dir
+/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg3hw-gcc-Default/hw3_trackball/CMakeFiles/copy_shaders_hw3_trackball.dir
+/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg3hw-gcc-Default/CMakeFiles/common_headers.dir
