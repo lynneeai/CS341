@@ -40,20 +40,32 @@ class Grid {
                 // your grid should have the same dimension as that quad, i.e.,
                 // reach from [-1, -1] to [1, 1].
 
-                // vertex position of the triangles.
-                vertices.push_back(-1.0f); vertices.push_back( 1.0f);
-                vertices.push_back( 1.0f); vertices.push_back( 1.0f);
-                vertices.push_back( 1.0f); vertices.push_back(-1.0f);
-                vertices.push_back(-1.0f); vertices.push_back(-1.0f);
+                float cell_width = 0.02f;
+                int js = 0;
+                for (int i = 0; i < 100; i ++){
+                    for(int j = 0; j < 100; j ++){
+                        // vertex position of the triangles.
+                        vertices.push_back(-1.0f + i * cell_width); vertices.push_back( -1.0f + (j + 1) * cell_width);
+                        vertices.push_back( -1.0f + (i + 1) * cell_width); vertices.push_back( -1.0f + (j + 1) * cell_width);
+                        vertices.push_back( -1.0f + (i + 1) * cell_width); vertices.push_back(-1.0f + j * cell_width);
 
-                // and indices.
-                indices.push_back(0);
-                indices.push_back(1);
-                indices.push_back(3);
-                indices.push_back(2);
+                        vertices.push_back(-1.0f + i * cell_width); vertices.push_back(-1.0f + j * cell_width);
+                        vertices.push_back(-1.0f + i * cell_width); vertices.push_back( -1.0f + (j + 1) * cell_width);
+                        vertices.push_back( -1.0f + (i + 1) * cell_width); vertices.push_back(-1.0f + j * cell_width);
 
+                        // and indices.
+                        indices.push_back(js + 0);
+                        indices.push_back(js + 1);
+                        indices.push_back(js + 2);
+
+                        indices.push_back(js + 3);
+                        indices.push_back(js + 4);
+                        indices.push_back(js + 5);
+
+                        js += 6;
+                    }
+                }
                 num_indices_ = indices.size();
-
                 // position buffer
                 glGenBuffers(1, &vertex_buffer_object_position_);
                 glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer_object_position_);
@@ -134,8 +146,8 @@ class Grid {
             glBindVertexArray(vertex_array_id_);
 
             // bind textures
-            glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_2D, texture_id_);
+            //glActiveTexture(GL_TEXTURE0);
+            //glBindTexture(GL_TEXTURE_2D, texture_id_);
 
             // setup MVP
             glm::mat4 MVP = projection*view*model;
@@ -147,10 +159,10 @@ class Grid {
             // draw
             // TODO 5: for debugging it can be helpful to draw only the wireframe.
             // You can do that by uncommenting the next line.
-            //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
             // TODO 5: depending on how you set up your vertex index buffer, you
             // might have to change GL_TRIANGLE_STRIP to GL_TRIANGLES.
-            glDrawElements(GL_TRIANGLE_STRIP, num_indices_, GL_UNSIGNED_INT, 0);
+            glDrawElements(GL_TRIANGLES, num_indices_, GL_UNSIGNED_INT, 0);
 
             glBindVertexArray(0);
             glUseProgram(0);
