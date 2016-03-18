@@ -18,6 +18,7 @@ void main() {
     ///>>>>>>>>>> TODO >>>>>>>>>>>
     /// TODO 2.2: Toon shading.
     /// 1) compute ambient term.
+    /*
     vec3 ref_dir = reflect( -light_dir, normal_mv);
     vec3 Iamb = ka*La;
     /// 2) compute diffuse term using the texture sampler tex.
@@ -26,6 +27,17 @@ void main() {
     vec3 Ispec = ks*Ls*texture(tex1D, pow(max( 0, dot( ref_dir, view_dir)),alpha)).r;
     
     color = Iamb  + Idiff + Ispec;
+    */
+    color += La*ka;
+    vec3 n = normalize(normal_mv);
+    vec3 l = normalize(light_dir);
+    vec3 v = normalize(view_dir);
+    vec3 r = reflect(-l,n);
+    float lambert = dot(n,l);
+    if(lambert > 0.0) {
+        color += kd*Ld*texture(tex1D, lambert).r;
+        color += Ls*ks*texture(tex1D, pow(max( 0, dot(r, v)),alpha)).r;
+    }
     ///<<<<<<<<<< TODO <<<<<<<<<<<
 
 

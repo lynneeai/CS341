@@ -37,4 +37,6 @@ void main() {
     vec3 Ispec = ks*Ls*pow(max( 0, dot( ref_dir, view_dir)),alpha);
     ///<<<<<<<<<< TODO <<<<<<<<<<<
     color = Iamb + Idiff + Ispec;
+
 }
+

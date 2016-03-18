@@ -18,7 +18,13 @@ void main() {
     // TODO 4.1: Flat shading.
     // 1) compute the light direction light_dir.
     // 2) compute the view direction view_dir.
+    /*
     light_dir = normalize(light_pos - vpoint_mv.xyz);
     view_dir = normalize(vec3(0.0,0.0,0.0) - vpoint_mv.xyz);
+    */
+
+    light_dir = light_pos - vpoint_mv.xyz;
+    view_dir = vec3(0.0, 0.0, 0.0) - vpoint_mv.xyz;
+
     //<<<<<<<<<< TODO <<<<<<<<<<<
 }

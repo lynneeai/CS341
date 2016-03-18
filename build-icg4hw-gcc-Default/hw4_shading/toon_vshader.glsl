@@ -22,8 +22,14 @@ void main() {
     // 1) compute normal_mv using the model_view matrix.
     // 2) compute the light direction light_dir.
     // 3) compute the view direction view_dir.
+    /*
     normal_mv = normalize(mat3(inverse(transpose(MV))) * vnormal);
     light_dir = normalize(light_pos - vpoint_mv.xyz);
     view_dir = normalize(vec3(0.0,0.0,0.0) - vpoint_mv.xyz);
+    */
+    normal_mv = mat3(transpose(inverse(MV))) * vnormal;
+    light_dir = light_pos - vpoint_mv.xyz;
+    view_dir = -vpoint_mv.xyz;
+
     //<<<<<<<<<< TODO <<<<<<<<<<<
 }
