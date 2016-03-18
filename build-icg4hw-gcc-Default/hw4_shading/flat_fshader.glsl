@@ -27,6 +27,7 @@ void main() {
     /// 1) compute triangle normal using dFdx and dFdy
     vec3 dx = dFdx(vpoint_mv.xyz);
     vec3 dy = dFdy(vpoint_mv.xyz);
+    /*
     vec3 normal = normalize(cross( dx, dy));
     vec3 ref_dir = reflect( -light_dir, normal);
     /// 1) compute ambient term.
@@ -36,6 +37,16 @@ void main() {
     /// 3) compute specular term.
     vec3 Ispec = ks*Ls*pow(max( 0, dot( ref_dir, view_dir)),alpha);
     ///<<<<<<<<<< TODO <<<<<<<<<<<
+    color = Iamb + Idiff + Ispec;
+    */
+
+    vec3 l = normalize(light_dir);
+    vec3 v = normalize(view_dir);
+    vec3 n = normalize(cross(dx, dy));
+    vec3 r = reflect(-l, n);
+    vec3 Iamb = ka*La;
+    vec3 Idiff = kd*Ld*max(0, dot(n, l));
+    vec3 Ispec = ks*Ls*pow(max(0, dot(r, v)), alpha);
     color = Iamb + Idiff + Ispec;
 
 }
