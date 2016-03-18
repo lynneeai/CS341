@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="icg16" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\common\;CMake Files\hw4_shading\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="common_headers">
+         <Option working_dir="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 common_headers" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="hw4_shading">
+         <Option output="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/hw4_shading" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DGLEW_STATIC" />
+            <Add option="-DGLM_FORCE_RADIANS" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/common" />
+            <Add directory="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/external" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 hw4_shading" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="hw4_shading/fast">
+         <Option output="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/hw4_shading" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DGLEW_STATIC" />
+            <Add option="-DGLM_FORCE_RADIANS" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include" />
+            <Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include" />
+            <Add directory="/Library/Frameworks" />
+            <Add directory="/System/Library/Frameworks" />
+            <Add directory="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/common" />
+            <Add directory="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/external" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 hw4_shading/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="copy_shaders_hw4_shading">
+         <Option working_dir="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 copy_shaders_hw4_shading" />
+            <CompileFile command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341\ Computer\ Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/common/check_error_gl.h">
+         <Option target="common_headers"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/common/icg_helper.h">
+         <Option target="common_headers"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/common/stb_image.h">
+         <Option target="common_headers"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/common/tiny_obj_loader.h">
+         <Option target="common_headers"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/main.cpp">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/art_fshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/art_vshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/flat_fshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/flat_vshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/gouraud_fshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/gouraud_vshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/mesh.h">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/mesh_fshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/mesh_vshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/phong_fshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/phong_vshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/spot_fshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/spot_vshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/texture.h">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/toon_fshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/mesh/toon_vshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/quad/quad.h">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/quad/quad_fshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/quad/quad_vshader.glsl">
+         <Option target="hw4_shading"/>
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/common/icg_settings.cmake">
+          <Option virtualFolder="CMake Files\common\" />
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/common/FindGLFW3.cmake">
+          <Option virtualFolder="CMake Files\common\" />
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/common/FindGLEW.cmake">
+          <Option virtualFolder="CMake Files\common\" />
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/common/FindGLM.cmake">
+          <Option virtualFolder="CMake Files\common\" />
+      </Unit>
+      <Unit filename="/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/icg4hw/hw4_shading/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\hw4_shading\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

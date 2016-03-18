@@ -1,0 +1,3 @@
+/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/CMakeFiles/hw4_shading.dir
+/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default/hw4_shading/CMakeFiles/copy_shaders_hw4_shading.dir
+/Users/Lynnee/Documents/Lynnee/EPFL/Courses/CS-341 Computer Graphics/CS341/build-icg4hw-gcc-Default/CMakeFiles/common_headers.dir
